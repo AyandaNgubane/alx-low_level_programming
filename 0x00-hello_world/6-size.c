@@ -2,10 +2,7 @@
 
 /**
  * main - starting point
- * This program prints out the size of varios data types
- *
- *
- *
+ * This program prints out the size of various data types
  *
  * Return : should be 0 if successful
  */
