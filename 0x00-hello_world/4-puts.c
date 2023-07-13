@@ -2,9 +2,11 @@
 
 /**
  * This program that prints out a string using the puts() function
- * it should return zero if passed
+ *
+ * main - Starting point
+ *
+ * Return: 0 if successful
  */
-
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
