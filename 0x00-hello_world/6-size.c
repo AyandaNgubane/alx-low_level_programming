@@ -1,11 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - starting point
- * This program prints out the size of various data types
- *
- *
- *
+ * main - starting point. This program prints out the size of various data type
  * Return : should be 0 if successful
  */
 int main(void)
