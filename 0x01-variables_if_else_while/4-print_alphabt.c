@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	for (int i = 'a'; i <= 'z', i++)
+	for (int i = 'a'; i <= 'z'; i++)
 	{
 		if ((i != 'q') || (i != 'e'))
 		{
