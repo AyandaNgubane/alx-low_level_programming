@@ -6,14 +6,14 @@
  */
 int main(void)
 {
-	int a, b, c
+	int a, b, c;
 
 	a = 0;
 
 	while (a < 100)
 	{
-		b = a % 10; 
-		c = a / 10; 
+		b = a % 10;
+		c = a / 10;
 
 		if (c < b)
 		{
