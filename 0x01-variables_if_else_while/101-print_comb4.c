@@ -15,12 +15,12 @@ int main(void)
 	{
 		b = a / 100;
 		c = (a / 10) % 10;
-	       	d = a % 10;
+		d = a % 10;
 
-		if ((b < c) && c < d)
+		if ((b < c) && (c < d))
 		{
-			putchar(c + '0');
 			putchar(b + '0');
+			putchar(c + '0');
 			putchar(d + '0');
 
 			if (a < 700)
