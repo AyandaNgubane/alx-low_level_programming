@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
- * main - This program prints all possible combinations of three digits using putchar()
+ * main - This program prints all possible combinations
+ * of three digits using putchar()
  *
  * Return: 0 if successfull
  */
@@ -14,7 +15,7 @@ int main(void)
 	{
 		b = a / 100;
 		c = (a / 10) % 10;
-	       	d = a % 10
+	       	d = a % 10;
 
 		if ((b < c) && c < d)
 		{

@@ -1,6 +1,7 @@
 #include <stdio.h>
 /**
- * main - This program prints all possible combinations of two digits using putchar()
+ * main - This program prints all possible combinations
+ * of two digits using putchar()
  *
  * Return: 0 if successfull
  */

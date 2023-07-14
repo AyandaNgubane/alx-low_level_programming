@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - This program prints the alphabets excluding q and e using putchar() only
+ * main - This program prints the alphabets
+ * excluding q and e using putchar() only
  *
  * Return: 0 if successful
  */
