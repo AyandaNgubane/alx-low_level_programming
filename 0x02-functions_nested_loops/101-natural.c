@@ -13,7 +13,7 @@ int main(void)
 
 	x = 1024;
 	sum = 0;
-	
+
 	for (y = 0; y < x; y++)
 	{
 		if ((y % 3 == 0) || (y % 5 == 0))
