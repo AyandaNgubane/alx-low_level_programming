@@ -1,8 +1,10 @@
 #include "main.h"
 
 /**
- * main - Write a function that adds two integers and returns the result.
+ * add - a function that adds two integers and returns the result.
  *
+ * @a: value to be added
+ * @b: value to be added
  * Return: 0 if successful
  */
 int add(int a, int b)

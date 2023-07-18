@@ -1,65 +1,30 @@
 #include "main.h"
 
 /**
- * main - Write a function that computes the absolute value of an integer.
+ * jack_bauer - function that prints every minute of the day
  *
  * Return: 0 if successful
  */
 void jack_bauer(void)
+
 {
 	int hours;
+	int minutes;
 
-	for(hours = 0; hours < 24; hours++)
+	for (hours = 0; hours <= 23; hours++)
 	{
-		int minutes;
+		for (minutes = 0; minutes <= 59; minutes++)
+		{
+			_putchar (hours / 10 + '0');
+			_putchar (hours % 10 + '0');
+			_putchar (':');
+			_putchar (minutes / 10 + '0');
+			_putchar (minutes % 10 + '0');
+			_putchar ('\n');
 
-		while(hours < 10)
-		{
-			for (minutes = 0; minutes < 60; minutes++)
-			{
-				while(minutes < 10)
-				{
-					_putchar('0');
-					_putchar(hours + '0');
-					_putchar(':');
-					_putchar('0');
-					_putchar(minutes + '0');
-					_putchar('\n');
-					minutes++;
-				}
-				while(minutes > 9)
-				{
-					_putchar('0');
-					_putchar(hours + '0');
-					_putchar(':');
-					_putchar(minutes + '0');
-					_putchar('\n');
-					minutes++;
-				}
-			}
 		}
-		while(hours > 9)
-		{
-			for (minutes = 0; minutes < 60; minutes++)
-			{
-				while(minutes < 10)
-				{
-					_putchar(hours + '0');
-					_putchar(':');
-					_putchar('0');
-					_putchar(minutes + '0');
-					_putchar('\n');
-					minutes++;
-				}
-				while(minutes > 9)
-				{
-					_putchar(hours + '0');
-					_putchar(':');
-					_putchar(minutes + '0');
-					_putchar('\n');
-					minutes++;
-				}
-			}
-		}
+
+
 	}
+
 }
