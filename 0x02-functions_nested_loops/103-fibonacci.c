@@ -6,29 +6,27 @@
  */
 int main(void)
 {
-	int i;
-	long int a;
-	long int b;
-	long int sum;
-	long int even;
+	unsigned long a;
+	unsigned long b;
+	unsigned long sum;
+	float tot_sum;
 
-	a = 1;
-	b = 2;
-	sum = 0;
-	even = 0;
+	a = 0;
+	b = 1;
 
-	for (i = 0; i < 49; i++)
+	while (1)
 	{
-		if ((b % 2 == 0) && (b <= 4000000))
-		{
-			even = even + b;
-		}
-		printf("%ld, ", a);
 		sum = a + b;
+		if (sum > 4000000)
+			break;
+
+		if ((sum % 2) == 0)
+			tot_sum += sum;
+
 		a = b;
 		b = sum;
-		if (i == 48)
-			printf("%ld\n", a);
 	}
+	printf("%.0f\n", tot_sum);
+
 	return (0);
 }
