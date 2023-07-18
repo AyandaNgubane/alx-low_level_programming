@@ -7,9 +7,9 @@
 int main(void)
 {
 	int i;
-	int a;
-	int b;
-	int sum;
+	long int a;
+	long int b;
+	long int sum;
 
 	a = 1;
 	b = 2;
@@ -17,12 +17,12 @@ int main(void)
 
 	for (i = 1; i <= 50; i++)
 	{
-		printf("%d, ", a);
+		printf("%ld, ", a);
 		sum = a + b;
 		a = b;
 		b = sum;
 		if (i == 50)
-			printf("%d\n", a);
+			printf("%ld\n", a);
 	}
 	return (0);
 }
