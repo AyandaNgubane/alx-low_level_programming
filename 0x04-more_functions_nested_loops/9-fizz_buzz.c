@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints fizz for and buzz 
- *
+ * main - prints fizz and buzz 
  * Return: 0 if successful
  */
 int main(void)
@@ -14,7 +13,6 @@ int main(void)
 		if ((i % 3 == 0) && (i % 5 == 0))
 		{
 			printf("FizzBuzz ");
-			continue;
 		}
 		else if (i % 3 == 0)
 		{
