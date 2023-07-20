@@ -28,7 +28,7 @@ void print_more_numbers(void)
             
 			j = i % 10;
             
-			putchar(j + '0');
+			_putchar(j + '0');
 			i++;
 		}
 		_putchar('\n');
