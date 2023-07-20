@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - prints fizz for 3 and buzz for 5
+ * main - prints fizz for and buzz 
  *
  * Return: 0 if successful
  */
