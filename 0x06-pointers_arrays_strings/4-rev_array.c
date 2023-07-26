@@ -19,13 +19,13 @@ void reverse_array(int *a, int n)
 
 	for (k = 0; k < n; k++)
 	{
-		b[k] = a[k];    /*saving the first n values of a to b*/
+		b[k] = a[k];
 	}
 	for (i = n - 1; i >= 0; i--)
 	{
 		if (i < (n / 2))
 		{
-			a[j] = b[i]; /*calling the values saved at b*/
+			a[j] = b[i];
 			j++;
 		}
 		else
