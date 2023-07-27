@@ -11,7 +11,7 @@ char *cap_string(char *str)
 	int i = 1, j, check;
 	char a[] = {',',';', '.', '!', '?', '"', '(', ')', '{', '}', '\n', '\t', ' '};
 
-	if (str[0] > 96 && s[0] < 123)
+	if (str[0] > 96 && str[0] < 123)
 		str[0] -= 32;
 
 	while (str[i] != '\0')
