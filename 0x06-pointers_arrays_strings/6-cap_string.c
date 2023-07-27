@@ -6,33 +6,34 @@
  * @str: string to be capitilized
  * Return: capitilized string
  */
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-	int i;
+	int i = 1, j, check;
+	char a[] = {',', ';', '.', '!', '?', '"', '(', ')', '{', '}', '\n', '\t', ' '};
 
-	for (i = 0; str[i] != '\0'; i++)
+	if (s[0] > 96 && s[0] < 123)
+		s[0] -= 32;
+
+	while (s[i] != '\0')
 	{
-		if (str[i] == ' ')
+		if (s[i] > 96 && s[i] < 123)
 		{
-			if ((str[i + 1] >= 'a') && (str[i + 1] <= 'z'))
+			j = 0;
+			check = 0;
+			while (check == 0 && j < 13)
 			{
-				str[i + 1] = (str[i + 1] - '0') + 16;
+				if (s[i - 1] == a[j])
+				{
+					check = 1;
+				}
+				j++;
+			}
+			if (check == 1)
+			{
+				s[i] -= 32;
 			}
 		}
-		else if (str[i] == '.' && str[i + 1] != ' ')
-		{
-			if (str[i + 1] != '\n' && str[i + 1] != '\t')
-			{
-				str[i + 1] = (str[i + 1] - '0') + 16;
-			}
-		}
-		else if (str[i] == '\n' || str[i] == '\t')
-		{
-			if (str[i + 1] != '\0')
-			{
-				str[i + 1] = (str[i + 1] - '0') + 16;
-			}
-		}
+		i++;
 	}
-	return (str);
+	return (s);
 }
