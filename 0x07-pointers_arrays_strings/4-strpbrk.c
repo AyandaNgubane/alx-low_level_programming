@@ -22,6 +22,6 @@ char *_strpbrk(char *s, char *accept)
 			}
 		}
 	}
-	end:
-		return (s[i] != '\0' ? s + i: '\0');
+end:
+	return (s[i] != '\0' ? s + i : '\0');
 }

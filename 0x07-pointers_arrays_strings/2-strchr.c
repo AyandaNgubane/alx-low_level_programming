@@ -23,6 +23,6 @@ char *_strchr(char *s, char c)
 		s = "NULL";
 	}
 	return (s);
-	end:
-		return (s[i] != '\0' ? s + i: '\0');
+end:
+	return (s[i] != '\0' ? s + i : '\0');
 }
