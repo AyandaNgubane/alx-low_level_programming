@@ -15,14 +15,8 @@ char *_strchr(char *s, char c)
 	{
 		if (s[i] == c)
 		{
-			goto end;
+			return (s[i] != '\0' ? s + i : '\0');
 		}
 	}
-	if (s[i] != c)
-	{
-		s = "NULL";
-	}
-	return (s);
-end:
-	return (s[i] != '\0' ? s + i : '\0');
+	return ("NULL");
 }
