@@ -18,5 +18,4 @@ char *_strchr(char *s, char c)
 			return (s[i] != '\0' ? (s + i) : '\0');
 		}
 	}
-	return ('\0');
 }
