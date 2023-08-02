@@ -11,7 +11,7 @@ int is_prime_number(int n)
 	return (_prime(n, 1));
 }
 /**
- * _prime - runs through the factors 
+ * _prime - runs through the factors
  *
  * @a: same value as n
  * @b: checks for factors of a
