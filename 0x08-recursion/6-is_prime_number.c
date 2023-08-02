@@ -8,7 +8,7 @@
  */
 int is_prime_number(int n)
 {
-	return (_prime(n, 2));
+	return (_prime(n, 1));
 }
 /**
  * _prime - runs through the factors 
@@ -19,27 +19,14 @@ int is_prime_number(int n)
  */
 int _prime(int a, int b)
 {
-	if (a % 2 == 0 && a != 2)
-	{
+	if (a <= 1)
 		return (0);
-	}
-	if (a == 1 || a < 0)
-	{
+
+	if (a % b == 0 && b > 1)
 		return (0);
-	}
-	if (a == 2)
-	{
+
+	if ((a / b) < b)
 		return (1);
-	}
-	if (a % b != 0 && a > b)
-	{
-		if (b == (a - 1))
-		{
-			return (1);
-		}
-		_prime(a, b + 1);
-	}
-	else
-		break;
-	return (0);
+
+	return (_prime(a, b + 1));
 }
