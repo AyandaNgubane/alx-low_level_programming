@@ -40,5 +40,7 @@ int _prime(int a, int b)
 		_prime(a, b + 1);
 	}
 	else
-		return (0);
+		goto end;
+end:
+	return (0);
 }
