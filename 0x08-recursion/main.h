@@ -11,3 +11,4 @@ int is_prime_number(int n);
 int is_palindrome(char *s);
 int palind2(char *a, int l);
 int palind3(char *a, int l);
+int wildcmp(char *s1, char *s2);
