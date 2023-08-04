@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
 	result = 0;
 	c = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	d = " !@#$%^&*()_+=-}{][|:|\\,./?><";
+	/*d = " !@#$%^&*()_+=-}{][|:|\\,./?><";*/
 
 	if (argc < 1)
 	{
