@@ -44,8 +44,6 @@ int main(int argc, char *argv[])
 	char *d;
 
 	result = 0;
-	c = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	d = " !@#$%^&*()_+=-}{][|:|\\,./?><";
 
 	if (argc < 1)
 	{
@@ -54,6 +52,8 @@ int main(int argc, char *argv[])
 	}
 	for (i = 0; i < argc; i++)
 	{
+		c = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		d = " !@#$%^&*()_+=-}{][|:|\\,./?><";
 		r = _strpbrk(argv[i], c);
 		t = _strpbrk(argv[i], d);
 		if (r != 0 && t != 0)
