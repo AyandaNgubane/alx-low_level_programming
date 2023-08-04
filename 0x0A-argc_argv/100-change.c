@@ -10,10 +10,13 @@
  */
 int main(int argc, char *argv[])
 {
+	int r;
+
+	r = 0;
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return (1);
+		r = 1;
 	}
 	else
 	{
@@ -59,5 +62,5 @@ int main(int argc, char *argv[])
 		total = coins25 + coins10 + coins5 + coins2 + coins1;
 		printf("%d\n", total);
 	}
-	return (0);
+	return (r);
 }
