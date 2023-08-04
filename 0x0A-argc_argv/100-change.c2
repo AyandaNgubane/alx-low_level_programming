@@ -10,7 +10,9 @@
  */
 int main(int argc, char *argv[])
 {
-	int r = 0;
+	int r;
+
+	r = 0;
 
 	if (argc != 2)
 	{
@@ -19,10 +21,20 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		int cents, total, coins25, coins10, coins5, coins2, coins1;
+		int cents;
+		int total;
+		int coins25;
+		int coins10;
+		int coins5;
+		int coins2;
+		int coins1;
 
 		cents = atoi(argv[1]);
-		coins25 = 0, coins10 = 0, coins5 = 0, coins2 = 0, coins1 = 0;
+		coins25 = 0;
+		coins10 = 0;
+		coins5 = 0;
+		coins2 = 0;
+		coins1 = 0;
 
 		if (cents >= 25)
 		{
@@ -45,9 +57,15 @@ int main(int argc, char *argv[])
 			cents = cents % 2;
 		}
 		if (cents == 1)
+		{
 			coins1 = cents;
+		}
 		total = coins25 + coins10 + coins5 + coins2 + coins1;
 		printf("%d\n", total);
 	}
 	return (r);
+}
+int calc_coins(int a)
+{
+
 }
