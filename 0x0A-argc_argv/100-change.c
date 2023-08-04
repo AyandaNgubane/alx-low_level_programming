@@ -32,11 +32,6 @@ int main(int argc, char *argv[])
 		coins2 = 0;
 		coins1 = 0;
 
-		if (cents < 0)
-		{
-			printf("0\n");
-			return (0);
-		}
 		if (cents >= 25)
 		{
 			coins25 = cents / 25;
