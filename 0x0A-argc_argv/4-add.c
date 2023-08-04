@@ -39,9 +39,9 @@ int main(int argc, char *argv[])
 	int result;
 	int m;
 	char *r;
-	/*char *t;*/
+	char *t;
 	char *c;
-	/*char *d;*/
+	char *d;
 
 	result = 0;
 
@@ -50,13 +50,13 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	for (m = 0; m < argc; m++)
+	for (m = 1; m < argc; m++)
 	{
 		c = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		/*d = "!@#$%^&*()_+=-}{][|:|\\,./?><";*/
+		d = "!@#$%^&*()_+=-}{][|:|\\,./?><";
 		r = _strpbrk(argv[m], c);
-		/*t = _strpbrk(argv[m], d);*/
-		if (r != 0)
+		t = _strpbrk(argv[m], d);
+		if (r != 0 || t != 0)
 		{
 			printf("Error\n");
 			return (1);
