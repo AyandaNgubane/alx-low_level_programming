@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 	for (m = 0; m < argc; m++)
 	{
 		c = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		d = " !@#$%^&*()_+=-}{][|:|\\,./?><";
+		/*d = " !@#$%^&*()_+=-}{][|:|\\,./?><";*/
 		r = _strpbrk(argv[m], c);
 		t = _strpbrk(argv[m], d);
 		if (r != 0 && t != 0)
