@@ -37,7 +37,7 @@ end:
 int main(int argc, char *argv[])
 {
 	int result;
-	int i;
+	int m;
 	int r;
 	int t;
 	char *c;
@@ -50,12 +50,12 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	for (i = 0; i < argc; i++)
+	for (m = 0; m < argc; m++)
 	{
 		c = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		d = " !@#$%^&*()_+=-}{][|:|\\,./?><";
-		r = _strpbrk(argv[i], c);
-		t = _strpbrk(argv[i], d);
+		r = _strpbrk(argv[m], c);
+		t = _strpbrk(argv[m], d);
 		if (r != 0 && t != 0)
 		{
 			printf("Error\n");
@@ -63,7 +63,7 @@ int main(int argc, char *argv[])
 		}
 		else
 		{
-			result = result + atoi(argv[i]);
+			result = result + atoi(argv[m]);
 		}
 	}
 	printf("%d\n", result);
