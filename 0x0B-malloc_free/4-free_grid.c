@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * free_greed - frees a 2d greed
+ * free_grid - frees a 2d grid
  *
  * @grid: 2d array
  * @height: height of array
