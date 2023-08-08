@@ -14,28 +14,20 @@ char *argstostr(int ac, char **av)
 	int i, j, k, sl, wl;
 
 	if (ac == 0 || av == NULL)
-	{
 		return (0);
-	}
 
 	sl = 0, k = 0;
 
 	for (i = 0; i < ac; i++)
 	{
 		wl = 0;
-
 		while (av[i][wl])
-		{
 			wl++;
-		}
 		sl = sl + wl + 1;
 	}
 	s = malloc((sl + 1) * sizeof(char));
-
 	if (s == 0)
-	{
 		return (0);
-	}
 	for (j = 0; j < ac; j++)
 	{
 		wl = 0;
@@ -50,6 +42,5 @@ char *argstostr(int ac, char **av)
 		k++;
 	}
 	s[k] = '\0';
-
 	return (s);
 }
