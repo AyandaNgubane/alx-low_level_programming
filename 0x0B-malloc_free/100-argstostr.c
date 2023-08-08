@@ -10,11 +10,46 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i;
+	char *s;
+	int i, j, k, sl, wl;
 
-	for (i = 0; i < height; i++)
+	if (ac == 0 || av == NULL)
 	{
-		free(grid[i]);
+		return (0);
 	}
-	free(grid);
+
+	sl = 0, k = 0;
+
+	for (i = 0; i < ac; i++)
+	{
+		wl = 0;
+
+		while (av[i][wl])
+		{
+			wl++;
+		}
+		sl = sl + wl + 1;
+	}
+	s = malloc((sl + 1) * sizeof(char));
+
+	if (s == 0)
+	{
+		return (0);
+	}
+	for (j = 0; j < ac; j++)
+	{
+		wl = 0;
+
+		while (av[j][wl])
+		{
+			s[k] = av[j][wl];
+			k++;
+			wl++;
+		}
+		s[k] = '\n';
+		k++;
+	}
+	s[k] = '\0';
+
+	return (s);
 }

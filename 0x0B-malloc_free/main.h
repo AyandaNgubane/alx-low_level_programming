@@ -6,3 +6,4 @@ void free_grid(int **grid, int height);
 char **strtow(char *str);
 char *sort_string(char *stn);
 int word_count(char *s);
+char *argstostr(int ac, char **av);
