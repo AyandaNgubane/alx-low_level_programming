@@ -9,8 +9,9 @@
  */
 char **strtow(char *str)
 {
-        char **s, *srt;
-        int l, m, wc, i, j, fr, k;
+	char **s;
+	char *srt;
+	int i, j, k, l, m, wc, fr;
 
 	if (str == NULL || *str == 0)
 		return (0);
@@ -49,7 +50,7 @@ char **strtow(char *str)
 }
 /**
  * word_count - counts number of words
- * 
+ *
  * @s: string to check
  * Return: result
  */
