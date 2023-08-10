@@ -4,9 +4,9 @@
 /**
  * string_nconcat - concatenates two strings
  *
- *@s1: string to concatenate to
- *@s2: string to concatenate with
- *@n: number of bytes
+ * @s1: string to concatenate to
+ * @s2: string to concatenate with
+ * @n: number of bytes
  * Return: string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -33,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s[i] = s1[i];
 	}
 
-	if (n > l2)
+	if (n >= l2)
 	{
 		n = l2;
 	}
