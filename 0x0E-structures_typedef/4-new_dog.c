@@ -32,7 +32,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(details->name);
 		return (0);
 	}
-	return (details)
+	return (details);
 }
 /**
  * _strdup - works similar to strdup
