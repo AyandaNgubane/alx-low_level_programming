@@ -66,39 +66,6 @@ char *_strdup(char *str)
 	{
 		ptr[j] = str[j];
 	}
+	ptr[j] = '\0';
 	return (ptr);
-}
-/**
- * _strdup2 - works similar to strdup
- *
- * @str: string to be checked
- * Return: pointer if successful or NULL if it fails
- */
-char *_strdup2(char *str)
-{
-	char *ptr2;
-	unsigned int j, length;
-
-	length = 0;
-
-	if (str == NULL)
-	{
-		return (NULL);
-	}
-	for (j = 0; str[j] != '\0'; j++)
-	{
-		length++;
-	}
-
-	ptr2 = malloc(length + 1);
-
-	if (ptr2 == NULL)
-	{
-		return (NULL);
-	}
-	for (j = 0; str[j] != '\0'; j++)
-	{
-		ptr2[j] = str[j];
-	}
-	return (ptr2);
 }
