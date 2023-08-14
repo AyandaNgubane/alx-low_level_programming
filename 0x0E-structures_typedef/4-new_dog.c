@@ -14,23 +14,23 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	details = malloc(sizeof(struct dog));
 
-	if (details == NULL || name == NULL || owner == NULL)
+	if (details == 0 || name == 0 || owner == 0)
 	{
-		return (NULL);
+		return (0);
 	}
 	details->name = _strdup(name);
-	if (details->name == NULL)
+	if (details->name == 0)
 	{
 		free(details);
-		return (NULL);
+		return (0);
 	}
 	details->age = age;
 	details->owner = _strdup(owner);
-	if (details->owner == NULL)
+	if (details->owner == 0)
 	{
 		free(details);
 		free(details->name);
-		return (NULL);
+		return (0);
 	}
 	return (details);
 }
