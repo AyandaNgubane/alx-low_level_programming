@@ -33,7 +33,7 @@ void print_opcodes(int c)
 	unsigned char *ptr;
 	int i;
 
-	ptr = (unsigned char *)print_opcodes;
+	ptr = (unsigned char *)main;
 
 	for (i = 0; i < c; i++)
 	{
