@@ -2,14 +2,14 @@
 
 /**
  * int_index - searches for an integer
- * 
+ *
  * @array: arrays
  * @size: size of array
  * @cmp: function pointer
  * Return: index
  */
 int int_index(int *array, int size, int (*cmp)(int))
-{	
+{
 	int i;
 
 	i = 0;
