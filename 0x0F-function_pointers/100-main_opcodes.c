@@ -24,14 +24,16 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	unsigned char *ptr;
+	char *ptr;
 	int i;
 
-	ptr = (unsigned char *)main;
+	ptr = (char *)main;
 
 	for (i = 0; i < bytes; i++)
 	{
-		printf("%02x ", ptr[i]);
+		printf("%02x", ptr[i]);
+		if (i != bytes - 1)
+			printf(" ");
 	}
 	printf("\n");
 	return (0);
