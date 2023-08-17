@@ -1,74 +1,50 @@
-#include <stdio.h>
-#include <stdarg.h>
 #include "variadic_functions.h"
+#include <stdio.h>
+#include <stdard.h>
 
 /**
  * print_all - prints anything
- *
- * @format: types of arguments
- * Return: void
+ * @format: types of arguments passed to the function
  */
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	int i;
-	char *str;
-	int length;
+	int i = 0;
+	char *str, *sep = "";
 
-	length = _strlen(format);
-	va_start(args, format);
-	i = 0;
+	va_list list;
 
-	while (i < length && (format != NULL && format[i] != '\0'))
+	va_start(list, format);
+
+	if (format)
 	{
-		switch (format[i])
+		while (format[i])
 		{
-			case 'c':
-				printf("%c", va_arg(args, int));
-				break;
-			case 'i':
-				printf("%d", va_arg(args, int));
-				break;
-			case 'f':
-				printf("%f", va_arg(args, double));
-				break;
-			case 's':
-				str = va_arg(args, char *);
-				if (str == NULL)
-					str = "(nil)";
-				printf("%s", str);
-				break;
-			default:
-				i++;
-				continue;
+			switch (format[i])
+			{
+				case 'c':
+					printf("%s%c", sep, va_arg(list, int));
+					break;
+				case 'i':
+					printf("%s%d", sep, va_arg(list, int));
+					break;
+				case 'f':
+					printf("%s%f", sep, va_arg(list, double));
+					break;
+				case 's':
+					str = va_arg(list, char *);
+					if (!str)
+						str = "(nil)";
+					printf("%s%s", sep, str);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			sep = ", ";
+			i++;
 		}
-		if (i != length - 1)
-		{
-			printf(", ");
-		}
-		i++;
 	}
+
 	printf("\n");
-	va_end(args);
-}
-/**
- * _strlen - counts length of string
- *
- * @s: string to be checked
- * Return: lenght
- */
-int _strlen(const char *s)
-{
-	int i;
-	int length;
-
-	length = 0;
-	i = 0;
-
-	while (s[i])
-	{
-		length++;
-		i++;
-	}
-	return (length);
+	va_end(list);
 }
