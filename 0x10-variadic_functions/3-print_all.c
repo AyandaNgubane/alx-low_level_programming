@@ -63,10 +63,12 @@ int _strlen(char *s)
 	int length;
 
 	length = 0;
+	i = 0;
 
 	while (s[i])
 	{
 		length++;
+		i++;
 	}
 	return (length);
 }
