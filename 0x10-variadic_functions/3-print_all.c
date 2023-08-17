@@ -57,7 +57,7 @@ void print_all(const char * const format, ...)
  * @s: string to be checked
  * Return: lenght
  */
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int i;
 	int length;
