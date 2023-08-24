@@ -3,7 +3,7 @@
 /**
  * add_node_end - adds new node at the end
  * @head: address of first node
- * @str - data of new node
+ * @str: data of new node
  * Return: address of new node
  */
 list_t *add_node(list_t **head, const char *str)
@@ -20,7 +20,7 @@ list_t *add_node(list_t **head, const char *str)
 	new->len = _strlen(str);
 	new->next = NULL;
 
-	while (ptr != NULL)
+	while (ptr->next != NULL)
 	{
 		ptr = ptr->next;
 	}
