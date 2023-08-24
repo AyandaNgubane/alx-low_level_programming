@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <stdlib.h>
-#include <string.h>
 
 /**
  * add_node_end - adds new node at the end
@@ -35,7 +33,7 @@ list_t *add_node(list_t **head, const char *str)
  * @s: string to be checked
  * Return: lenght
  */
-int _strlen(char *s)
+int _strlen(const char *s)
 {
 	int i;
 	int length;
