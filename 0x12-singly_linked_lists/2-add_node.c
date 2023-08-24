@@ -1,9 +1,11 @@
 #include "lists.h"
+#include <stdlib.h>
+#include <string.h>
 
 /**
  * add_node - adds new node at the beginning
  * @head: address of first node
- * @str:  data of new node
+ * @str: data of new node
  * Return: address of new node
  */
 list_t *add_node(list_t **head, const char *str)
