@@ -20,12 +20,20 @@ list_t *add_node_end(list_t **head, const char *str)
 	new->len = _strlen(str);
 	new->next = NULL;
 
-	while (ptr->next != NULL)
+	if (*head == NULL)
 	{
-		ptr = ptr->next;
+		*head == new;
+		return (*head);
 	}
-	ptr->next = new;
-	return (new);
+	else
+	{
+		while (ptr->next != NULL)
+		{
+			ptr = ptr->next;
+		}
+		ptr->next = new;
+		return (ptr);
+	}
 }
 /**
  * _strlen - counts length of string
