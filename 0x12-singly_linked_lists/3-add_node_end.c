@@ -6,7 +6,7 @@
  * @str: data of new node
  * Return: address of new node
  */
-list_t *add_node(list_t **head, const char *str)
+list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new, *ptr;
 
