@@ -19,7 +19,7 @@ size_t print_listint_safe(const listint_t *head)
 		if (new == NULL)
 			exit(98);
 
-		new->p = (void *)head;
+		new->ptr = (void *)head;
 		new->next = pnt;
 		pnt = new;
 
@@ -28,7 +28,7 @@ size_t print_listint_safe(const listint_t *head)
 		while (xtr->next != NULL)
 		{
 			xtr = xtr->next;
-			if (head == xtr->p)
+			if (head == xtr->ptr)
 			{
 				printf("-> [%p] %d\n", (void *)head, head->n);
 				_free(&pnt);
