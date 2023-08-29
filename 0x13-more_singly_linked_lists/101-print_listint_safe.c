@@ -9,7 +9,7 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t nodes = 0;
-	listp_t *new, *xtr, pnt;
+	listp_t *new, *xtr, *pnt;
 
 	pnt = NULL;
 	while (head != NULL)
@@ -57,7 +57,7 @@ void _free(listp_t **head)
 	if (head != NULL)
 	{
 		new = *head;
-		while ((new = tmp) != NULL)
+		while ((tmp = new) != NULL)
 		{
 			new = new->next;
 			free(tmp);
