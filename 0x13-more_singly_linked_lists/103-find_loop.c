@@ -19,7 +19,7 @@ listint_t *find_listint_loop(listint_t *head)
 	while (node1)
 	{
 		if (node1 == node)
-		{	
+		{
 			node = head;
 
 			while (node1 != node)

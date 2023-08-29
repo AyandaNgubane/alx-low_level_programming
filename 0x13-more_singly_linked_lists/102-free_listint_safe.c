@@ -12,7 +12,7 @@ size_t free_listint_safe(listint_t **h)
 	listp_t *new, *xtr, *pnt;
 	listint_t *tmp;
 
-	hptr = NULL;
+	pnt = NULL;
 	while (*h != NULL)
 	{
 		new = malloc(sizeof(listp_t));
