@@ -32,7 +32,7 @@ size_t free_listint_safe(listint_t **h)
 			if (*h == xtr->ptr)
 			{
 				*h = NULL;
-				_free(&pnt);
+				_free2(&pnt);
 				return (nodes);
 			}
 		}
@@ -44,16 +44,16 @@ size_t free_listint_safe(listint_t **h)
 	}
 
 	*h = NULL;
-	_free(&pnt);
+	_free2(&pnt);
 	return (nodes);
 }
 /**
- * _free - frees a linked list
+ * _free2 - frees a linked list
  * @head: head of a list
  *
  * Return: void
  */
-void _free(listp_t **head)
+void _free2(listp_t **head)
 {
 	listp_t *new, *tmp;
 
