@@ -36,7 +36,7 @@ void file_cpy(const char *orig, const char *cpy)
 		exit(98);
 	}
 
-	fd_cpy = open(dest, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	fd_cpy = open(cpy, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	while ((len_r = read(fd_orig, buffer, 1024)) > 0)
 	{
 		if (fd_cpy == -1 || write(fd_cpy, buffer, len_r) != len_r)
